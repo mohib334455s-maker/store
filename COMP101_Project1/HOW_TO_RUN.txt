@@ -1,0 +1,35 @@
+COMP101 Project 1 — Peakline Outfitters
+How to run the website for grading / demo
+
+1. Open Terminal in the project root folder (Desktop\t)
+2. Run: npm install
+3. Run: npm run dev
+4. Open: http://localhost:3000
+
+Login for grading
+Website Username: admin
+Website Password: Peakline101
+
+Important pages
+Home:            http://localhost:3000/
+Shop:            http://localhost:3000/shop
+Out of Stock:    http://localhost:3000/shop/PL-TRV-002
+Order tracking:  http://localhost:3000/order/PKL-10001
+Dashboard login: http://localhost:3000/login
+CSV import:      http://localhost:3000/admin/import
+Inventory:       http://localhost:3000/admin/products
+Orders:          http://localhost:3000/admin/orders
+Report:          http://localhost:3000/report
+Presentation:    http://localhost:3000/presentation
+
+Submission files
+CSV:             COMP101_Project1\CSV\products.csv
+Screenshots:     COMP101_Project1\Screenshots\
+Report HTML:     COMP101_Project1\Report\COMP101_Project1_Report.html
+PowerPoint:      COMP101_Project1\Presentation\COMP101_Project1_Presentation.pptx
+
+Before Blackboard upload
+1. Confirm student names in src\lib\store.ts (currently Alex Morgan / Sam Rivera)
+2. Open the Report HTML in Chrome -> Ctrl+P -> Save as PDF
+   OR open /report on the live site and use Print / Save as PDF
+3. Keep npm run dev running during the instructor demo
