@@ -1,5 +1,4 @@
-import { readFile } from "fs/promises";
-import path from "path";
+import { OFFICIAL_PRODUCTS_CSV } from "@/data/catalogCsv";
 import { CSV_HEADERS } from "@/lib/store";
 
 export type ProductCsvRow = {
@@ -63,8 +62,7 @@ export function parseCsv(text: string): ProductCsvRow[] {
 
 export async function readOfficialCsv(): Promise<{ filename: string; text: string; rows: ProductCsvRow[] }> {
   const filename = "products.csv";
-  const csvPath = path.join(process.cwd(), "public", "data", "products.csv");
-  const text = await readFile(csvPath, "utf8");
+  const text = OFFICIAL_PRODUCTS_CSV;
   return { filename, text, rows: parseCsv(text) };
 }
 

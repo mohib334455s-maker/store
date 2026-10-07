@@ -13,9 +13,6 @@ type StoreData = {
   orderItems: OrderItem[];
 };
 
-const dataDir = path.join(process.cwd(), ".data");
-const dataFile = path.join(dataDir, "store.json");
-
 const emptyStore = (): StoreData => ({
   nextProductId: 1,
   nextImportId: 1,
@@ -31,26 +28,46 @@ const globalForStore = globalThis as typeof globalThis & {
   __peaklineStore?: StoreData;
 };
 
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const dataDir = path.join(process.cwd(), ".data");
+const dataFile = path.join(dataDir, "store.json");
+
 function loadStore(): StoreData {
   if (globalForStore.__peaklineStore) {
     return globalForStore.__peaklineStore;
   }
-  mkdirSync(dataDir, { recursive: true });
-  if (!existsSync(dataFile)) {
-    const fresh = emptyStore();
-    writeFileSync(dataFile, JSON.stringify(fresh, null, 2), "utf8");
-    globalForStore.__peaklineStore = fresh;
-    return fresh;
+
+  if (isServerless) {
+    globalForStore.__peaklineStore = emptyStore();
+    return globalForStore.__peaklineStore;
   }
-  const parsed = JSON.parse(readFileSync(dataFile, "utf8")) as StoreData;
-  globalForStore.__peaklineStore = parsed;
-  return parsed;
+
+  try {
+    mkdirSync(dataDir, { recursive: true });
+    if (existsSync(dataFile)) {
+      globalForStore.__peaklineStore = JSON.parse(readFileSync(dataFile, "utf8")) as StoreData;
+    } else {
+      const fresh = emptyStore();
+      writeFileSync(dataFile, JSON.stringify(fresh, null, 2), "utf8");
+      globalForStore.__peaklineStore = fresh;
+    }
+  } catch {
+    globalForStore.__peaklineStore = emptyStore();
+  }
+
+  return globalForStore.__peaklineStore;
 }
 
 function saveStore(store: StoreData) {
-  mkdirSync(dataDir, { recursive: true });
-  writeFileSync(dataFile, JSON.stringify(store, null, 2), "utf8");
   globalForStore.__peaklineStore = store;
+  if (isServerless) {
+    return;
+  }
+  try {
+    mkdirSync(dataDir, { recursive: true });
+    writeFileSync(dataFile, JSON.stringify(store, null, 2), "utf8");
+  } catch {
+  }
 }
 
 function nowIso() {
