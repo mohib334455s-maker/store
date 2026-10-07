@@ -6,10 +6,10 @@
   --color-pine-light: #2a7a60;
   --color-gold: #c4a35a;
   --color-gold-dark: #9c7c38;
-  --color-cream: #f3f5f2;
-  --color-sand: #e2e7e2;
-  --color-ink: #1c1917;
-  --color-muted: #6b645b;
+  --color-cream: #f2f5f3;
+  --color-sand: #dde5df;
+  --color-ink: #141816;
+  --color-muted: #5f6a63;
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
 }
@@ -20,7 +20,10 @@ body {
 }
 
 body {
-  background: var(--color-cream);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(26, 95, 74, 0.08), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(196, 163, 90, 0.1), transparent 50%),
+    linear-gradient(180deg, #eef3ef 0%, #f2f5f3 40%, #e8eee9 100%);
   color: var(--color-ink);
 }
 
@@ -40,6 +43,46 @@ img {
 
 .product-copy li {
   margin: 0.2rem 0;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softZoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.rise {
+  animation: rise 0.8s ease both;
+}
+
+.rise-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.rise-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.rise-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.hero-zoom {
+  animation: softZoom 1.4s ease both;
 }
 
 .evidence-frame {

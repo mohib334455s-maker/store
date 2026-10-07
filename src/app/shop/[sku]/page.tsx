@@ -20,20 +20,20 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
   return (
     <Storefront>
-      <section className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-[2rem] bg-sand">
-          <img src={product.imageUrl} alt={product.title} className="h-full min-h-[320px] w-full object-cover" />
+      <section className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:gap-14">
+        <div className="overflow-hidden rounded-[2rem] bg-sand shadow-[0_24px_50px_rgba(20,24,22,0.08)]">
+          <img src={product.imageUrl} alt={product.title} className="h-full min-h-[360px] w-full object-cover" />
         </div>
-        <div>
-          <Link href="/shop" className="text-sm font-medium text-pine">
+        <div className="flex flex-col justify-center">
+          <Link href="/shop" className="text-sm font-medium text-pine transition hover:text-pine-dark">
             Back to shop
           </Link>
-          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted">{product.category}</p>
-          <h1 className="mt-3 font-serif text-4xl">{product.title}</h1>
-          <p className="mt-4 font-serif text-3xl text-pine">{money(product.price)}</p>
-          {outOfStock ? <p className="mt-2 text-sm font-semibold text-red-700">Out of Stock</p> : null}
-          <div className="product-copy mt-6 text-base leading-7 text-ink" dangerouslySetInnerHTML={{ __html: product.description }} />
-          <div className="mt-8">
+          <p className="mt-5 text-xs uppercase tracking-[0.22em] text-muted">{product.category}</p>
+          <h1 className="mt-3 font-serif text-4xl leading-tight sm:text-5xl">{product.title}</h1>
+          <p className="mt-5 font-serif text-3xl text-pine">{money(product.price)}</p>
+          {outOfStock ? <p className="mt-3 text-sm font-semibold text-red-700">Out of Stock</p> : null}
+          <div className="product-copy mt-7 text-base leading-8 text-ink/90" dangerouslySetInnerHTML={{ __html: product.description }} />
+          <div className="mt-9">
             <AddToCart
               sku={product.sku}
               title={product.title}

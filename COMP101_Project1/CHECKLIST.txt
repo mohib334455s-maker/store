@@ -1,0 +1,22 @@
+COMP101 Project 1 — Requirements checklist (Peakline Outfitters)
+
+DONE — Store can import products from CSV
+DONE — Product images use online ImageURL links
+DONE — Inventory tracking enabled
+DONE — One product stock = 1 (PL-TRV-002), purchase marks Out of Stock
+DONE — Test order fulfilled with tracking DXB-TRK-12345
+DONE — Mobile-responsive layout + mobile menu
+DONE — Logo + brand color #1A5F4A across UI
+DONE — 10 products in 3 categories (Hiking, Camping, Travel)
+DONE — CSV headers: SKU,Title,Category,Price,Stock,Description,ImageURL
+DONE — Admin login username/password for grading (admin / Peakline101)
+DONE — Report page at /report (cover, intro, credentials, screenshots)
+DONE — Presentation page at /presentation
+DONE — PowerPoint file: run npm run pptx (COMP101_Project1/Presentation/)
+DONE — Evidence HTML screenshots in COMP101_Project1/Screenshots/
+DONE — Printable report HTML in COMP101_Project1/Report/
+
+Before BB upload:
+1. Put your real full names in src/lib/store.ts (STUDENT_1 / STUDENT_2)
+2. Open /report -> Print -> Save as PDF
+3. Keep the live site running or use the Vercel URL for grading
