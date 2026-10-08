@@ -43,18 +43,6 @@ export default function AboutPage() {
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             <div className="rounded-[1.5rem] bg-white/80 p-6 ring-1 ring-sand">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted">Brand color</p>
-              <p className="mt-2 font-semibold text-pine">
-                {STORE.brandColorName} · {STORE.brandColor}
-              </p>
-            </div>
-            <div className="rounded-[1.5rem] bg-white/80 p-6 ring-1 ring-sand">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted">Accent</p>
-              <p className="mt-2 font-semibold" style={{ color: STORE.accentColor }}>
-                {STORE.accentColorName} · {STORE.accentColor}
-              </p>
-            </div>
-            <div className="rounded-[1.5rem] bg-white/80 p-6 ring-1 ring-sand">
               <p className="text-xs uppercase tracking-[0.18em] text-muted">Categories</p>
               <p className="mt-2">Hiking · Camping · Travel</p>
             </div>

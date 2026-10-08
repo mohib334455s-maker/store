@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { PrintButton } from "@/components/PrintButton";
+import { Logo } from "@/components/Logo";
 import { getOrderItems, listCsvImports, listOrders, listProducts } from "@/db";
 import { bootstrapStore } from "@/lib/bootstrap";
 import { readOfficialCsv } from "@/lib/csv";
@@ -35,11 +35,6 @@ export default async function ReportPage() {
 
   return (
     <div className="bg-[#f7f4ee] text-ink">
-      <div className="no-print mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
-        <p className="text-sm text-muted">COMP101 academic report · live evidence from the Northlane store</p>
-        <PrintButton />
-      </div>
-
       <article className="mx-auto max-w-4xl bg-white px-6 py-12 shadow-xl sm:px-12">
         <section className="border-b border-sand pb-10 text-center">
           <img src="/images/aud-logo.svg" alt="American University in Dubai" className="mx-auto h-28 w-28" />
@@ -47,6 +42,9 @@ export default async function ReportPage() {
           <h1 className="mt-3 font-serif text-4xl">{COURSE_NAME}</h1>
           <p className="mt-2 font-serif text-2xl">{PROJECT_TITLE}</p>
           <p className="mt-6 text-lg">{STORE.legalName} — Outdoor E-Commerce Store</p>
+          <div className="mt-6 flex justify-center">
+            <Logo href="/report" />
+          </div>
           <div className="mt-8 text-sm">
             <p>
               <span className="text-muted">Student Full Name:</span> {STUDENT_NAME}
@@ -65,8 +63,8 @@ export default async function ReportPage() {
           <p className="mt-4 leading-7">
             The selected platform is {STORE.platform}. This is an accepted e-commerce implementation for COMP101 because it
             provides the required storefront, CSV product import, inventory tracking, test checkout, order fulfillment, and
-            tracking-number workflow. The brand identity uses the Northlane compass-mark logo and the brand color{" "}
-            {STORE.brandColorName} ({STORE.brandColor}), which appears on buttons, navigation, and dashboard actions.
+            tracking-number workflow. The brand identity uses a minimal circular NL mark with stacked Northlane Outfitters
+            wordmark, applied across the header, footer, dashboard, report, and presentation.
           </p>
           <p className="mt-4 leading-7">
             Product images are not stored as local computer file paths. They are hosted online and referenced through direct
@@ -113,10 +111,11 @@ export default async function ReportPage() {
               <strong>Branding.</strong> Store concept defined as a premium outdoor outfitter.
             </li>
             <li>
-              <strong>Logo.</strong> Compass mark applied across header, footer, dashboard, report, and presentation.
+              <strong>Logo.</strong> Circular NL mark with stacked Northlane Outfitters wordmark applied across header,
+              footer, dashboard, report, and presentation.
             </li>
             <li>
-              <strong>Brand color.</strong> {STORE.brandColor} applied to buttons, navigation, and admin actions.
+              <strong>Storefront styling.</strong> Consistent navigation, buttons, and admin actions applied across the site.
             </li>
             <li>
               <strong>CSV creation.</strong> Official headers SKU,Title,Category,Price,Stock,Description,ImageURL used for 10
