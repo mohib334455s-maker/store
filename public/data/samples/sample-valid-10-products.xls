@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Worksheet ss:Name="Products">
+  <Table>
+   <Row>
+    <Cell><Data ss:Type="String">SKU</Data></Cell>
+    <Cell><Data ss:Type="String">Title</Data></Cell>
+    <Cell><Data ss:Type="String">Category</Data></Cell>
+    <Cell><Data ss:Type="String">Price</Data></Cell>
+    <Cell><Data ss:Type="String">Stock</Data></Cell>
+    <Cell><Data ss:Type="String">Description</Data></Cell>
+    <Cell><Data ss:Type="String">ImageURL</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-HIK-001</Data></Cell>
+    <Cell><Data ss:Type="String">Alpine Ridge Backpack 45L</Data></Cell>
+    <Cell><Data ss:Type="String">Hiking</Data></Cell>
+    <Cell><Data ss:Type="String">189.00</Data></Cell>
+    <Cell><Data ss:Type="String">24</Data></Cell>
+    <Cell><Data ss:Type="String">The Alpine Ridge 45L is built for multi-day mountain travel. A weather-resistant ripstop shell, ventilated harness, and hydration sleeve keep the load stable on steep, exposed terrain.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/1363956/pexels-photo-1363956.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-HIK-002</Data></Cell>
+    <Cell><Data ss:Type="String">Merino Trail Socks 3-Pack</Data></Cell>
+    <Cell><Data ss:Type="String">Hiking</Data></Cell>
+    <Cell><Data ss:Type="String">36.00</Data></Cell>
+    <Cell><Data ss:Type="String">48</Data></Cell>
+    <Cell><Data ss:Type="String">These merino blend trail socks regulate temperature, reduce blister risk, and stay comfortable across long approaches and changing weather.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/4495760/pexels-photo-4495760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-HIK-003</Data></Cell>
+    <Cell><Data ss:Type="String">Carbonlite Trekking Poles</Data></Cell>
+    <Cell><Data ss:Type="String">Hiking</Data></Cell>
+    <Cell><Data ss:Type="String">129.00</Data></Cell>
+    <Cell><Data ss:Type="String">18</Data></Cell>
+    <Cell><Data ss:Type="String">Featherlight carbon shafts with secure flick locks and tungsten tips provide balance and joint relief on ascents, descents, and river crossings.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/4763005/pexels-photo-4763005.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-HIK-004</Data></Cell>
+    <Cell><Data ss:Type="String">Summit Trail Running Shoes</Data></Cell>
+    <Cell><Data ss:Type="String">Hiking</Data></Cell>
+    <Cell><Data ss:Type="String">158.00</Data></Cell>
+    <Cell><Data ss:Type="String">12</Data></Cell>
+    <Cell><Data ss:Type="String">Aggressive lugs, a protective rock plate, and a secure midfoot wrap give confident grip on wet roots, scree, and packed alpine trail.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/27972222/pexels-photo-27972222.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-CMP-001</Data></Cell>
+    <Cell><Data ss:Type="String">Ultralight 2-Person Tent</Data></Cell>
+    <Cell><Data ss:Type="String">Camping</Data></Cell>
+    <Cell><Data ss:Type="String">249.00</Data></Cell>
+    <Cell><Data ss:Type="String">8</Data></Cell>
+    <Cell><Data ss:Type="String">A two-person, three-season shelter with a fast pitch, strong wind profile, and a compact packed size for remote camps.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/9290539/pexels-photo-9290539.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-CMP-002</Data></Cell>
+    <Cell><Data ss:Type="String">Alpine Down Sleeping Bag</Data></Cell>
+    <Cell><Data ss:Type="String">Camping</Data></Cell>
+    <Cell><Data ss:Type="String">219.00</Data></Cell>
+    <Cell><Data ss:Type="String">10</Data></Cell>
+    <Cell><Data ss:Type="String">Responsible down fill and a mummy profile trap warmth down to 0°C while remaining light enough for backpacking.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/10762580/pexels-photo-10762580.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-CMP-003</Data></Cell>
+    <Cell><Data ss:Type="String">Titanium Camp Stove</Data></Cell>
+    <Cell><Data ss:Type="String">Camping</Data></Cell>
+    <Cell><Data ss:Type="String">89.00</Data></Cell>
+    <Cell><Data ss:Type="String">22</Data></Cell>
+    <Cell><Data ss:Type="String">A fold-flat titanium stove that boils quickly, packs into a cook pot, and handles morning coffee as well as remote trail meals.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/6831220/pexels-photo-6831220.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-CMP-004</Data></Cell>
+    <Cell><Data ss:Type="String">Insulated Steel Bottle 1L</Data></Cell>
+    <Cell><Data ss:Type="String">Camping</Data></Cell>
+    <Cell><Data ss:Type="String">42.00</Data></Cell>
+    <Cell><Data ss:Type="String">35</Data></Cell>
+    <Cell><Data ss:Type="String">Double-wall insulated 1L steel bottle keeps water cold on hot climbs and tea warm at camp, with a leak-resistant cap.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/10939968/pexels-photo-10939968.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-TRV-001</Data></Cell>
+    <Cell><Data ss:Type="String">Packable Storm Jacket</Data></Cell>
+    <Cell><Data ss:Type="String">Travel</Data></Cell>
+    <Cell><Data ss:Type="String">164.00</Data></Cell>
+    <Cell><Data ss:Type="String">15</Data></Cell>
+    <Cell><Data ss:Type="String">A lightweight waterproof-breathable shell that packs into its own pocket and blocks wind and rain without extra bulk.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/12505397/pexels-photo-12505397.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NL-TRV-002</Data></Cell>
+    <Cell><Data ss:Type="String">Compact Trail First Aid Kit</Data></Cell>
+    <Cell><Data ss:Type="String">Travel</Data></Cell>
+    <Cell><Data ss:Type="String">28.00</Data></Cell>
+    <Cell><Data ss:Type="String">1</Data></Cell>
+    <Cell><Data ss:Type="String">A trail-ready medical kit with wound care, blister treatment, and emergency essentials in a weather-resistant pouch. This product is used for the inventory Out-of-Stock test.&lt;ul&gt;&lt;li&gt;High Quality Material&lt;/li&gt;&lt;li&gt;1 Year Warranty&lt;/li&gt;&lt;li&gt;Free Delivery&lt;/li&gt;&lt;/ul&gt;</Data></Cell>
+    <Cell><Data ss:Type="String">https://images.pexels.com/photos/5149759/pexels-photo-5149759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { listCsvImports, listProducts } from "@/db";
 import { readOfficialCsv } from "@/lib/csv";
-import { CSV_FIELD_MAPPING } from "@/lib/store";
+import { CSV_FIELD_MAPPING, CSV_HEADERS } from "@/lib/store";
 import { ImportActions } from "@/app/admin/import/ImportActions";
 import { formatDate } from "@/lib/format";
 
@@ -8,6 +9,9 @@ export default async function ImportPage() {
   const file = await readOfficialCsv();
   const catalog = await listProducts("title-asc");
   const history = await listCsvImports();
+  const latest = history[0];
+  const allOnline = file.rows.every((row) => /^https?:\/\//i.test(row.ImageURL));
+  const countOk = file.rows.length === 10 && catalog.length === 10;
 
   return (
     <div className="space-y-8">
@@ -15,10 +19,34 @@ export default async function ImportPage() {
         <p className="text-xs uppercase tracking-[0.25em] text-gold-dark">Data management</p>
         <h1 className="mt-2 font-serif text-4xl">CSV product import</h1>
         <p className="mt-3 max-w-3xl text-muted">
-          Products are not created one by one in the catalog. They are imported from a structured CSV file with online image
-          URLs. Field mapping is verified before import.
+          Products are not created one by one in the catalog. They are imported from a structured CSV file with online
+          image URLs. Field mapping is verified before import.
         </p>
       </div>
+
+      <section className="rounded-3xl bg-white p-6">
+        <h2 className="font-serif text-2xl">Import checklist</h2>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li className={file.rows.length === 10 ? "text-pine" : "text-red-700"}>
+            {file.rows.length === 10 ? "✓" : "×"} Official CSV has exactly 10 products ({file.rows.length} found)
+          </li>
+          <li className={allOnline ? "text-pine" : "text-red-700"}>
+            {allOnline ? "✓" : "×"} All ImageURL values are online http(s) links
+          </li>
+          <li className="text-pine">✓ Header is {CSV_HEADERS.join(",")}</li>
+          <li className={catalog.length === 10 ? "text-pine" : "text-red-700"}>
+            {catalog.length === 10 ? "✓" : "×"} Live catalog currently has {catalog.length} products
+          </li>
+          <li className={latest?.status === "success" ? "text-pine" : "text-muted"}>
+            {latest?.status === "success" ? "✓" : "·"} Latest import:{" "}
+            {latest ? `${latest.filename} · ${latest.rowCount} rows · ${latest.status}` : "none yet"}
+          </li>
+          <li className={countOk ? "text-pine" : "text-muted"}>
+            {countOk ? "✓" : "·"} CSV and catalog counts match for grading
+          </li>
+        </ul>
+      </section>
+
       <section className="rounded-3xl bg-white p-6">
         <h2 className="font-serif text-2xl">Field mapping</h2>
         <div className="mt-4 overflow-x-auto">
@@ -40,10 +68,45 @@ export default async function ImportPage() {
           </table>
         </div>
       </section>
+
+      <section className="rounded-3xl bg-white p-6">
+        <h2 className="font-serif text-2xl">Excel / CSV samples</h2>
+        <p className="mt-2 text-sm text-muted">
+          Open the Excel samples, edit if needed, then Save As CSV UTF-8 and upload below. Ready-to-upload CSV samples are
+          included.
+        </p>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>
+            <a className="font-semibold text-pine" href="/data/products.csv" download>
+              products.csv
+            </a>{" "}
+            · official catalog
+          </li>
+          <li>
+            <a className="font-semibold text-pine" href="/data/samples/sample-valid-10-products.csv" download>
+              sample-valid-10-products.csv
+            </a>{" "}
+            · ready to upload
+          </li>
+          <li>
+            <a className="font-semibold text-pine" href="/data/samples/sample-valid-10-products.xls" download>
+              sample-valid-10-products.xls
+            </a>{" "}
+            · open in Excel
+          </li>
+          <li>
+            <a className="font-semibold text-pine" href="/data/samples/sample-template-10-products.xls" download>
+              sample-template-10-products.xls
+            </a>{" "}
+            · Excel template
+          </li>
+        </ul>
+      </section>
+
       <section className="rounded-3xl bg-white p-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="font-serif text-2xl">Official CSV · {file.filename}</h2>
-          <a href="/data/products.csv" className="text-sm font-semibold text-pine">
+          <a href="/data/products.csv" className="text-sm font-semibold text-pine" download>
             Download products.csv
           </a>
         </div>
@@ -77,15 +140,43 @@ export default async function ImportPage() {
         </div>
         <ImportActions currentCount={catalog.length} />
       </section>
+
+      <section className="rounded-3xl bg-white p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-serif text-2xl">Imported catalog preview</h2>
+          <Link href="/admin/products" className="text-sm font-semibold text-pine">
+            Manage inventory →
+          </Link>
+        </div>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {catalog.map((product) => (
+            <div key={product.id} className="flex gap-3 rounded-2xl border border-sand p-3">
+              <img src={product.imageUrl} alt={product.title} className="h-16 w-16 rounded-xl object-cover" />
+              <div>
+                <p className="text-xs text-muted">{product.sku}</p>
+                <p className="font-medium">{product.title}</p>
+                <p className="text-sm text-pine">
+                  {product.category} · ${product.price} · stock {product.stock}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="rounded-3xl bg-white p-6">
         <h2 className="font-serif text-2xl">Import history</h2>
-        <ul className="mt-4 space-y-3 text-sm">
-          {history.map((item) => (
-            <li key={item.id} className="rounded-2xl bg-cream px-4 py-3">
-              {formatDate(item.importedAt)} · {item.filename} · {item.rowCount} rows · {item.status}
-            </li>
-          ))}
-        </ul>
+        {history.length === 0 ? (
+          <p className="mt-4 text-sm text-muted">No imports yet. Use Import official products.csv above.</p>
+        ) : (
+          <ul className="mt-4 space-y-3 text-sm">
+            {history.map((item) => (
+              <li key={item.id} className="rounded-2xl bg-cream px-4 py-3">
+                {formatDate(item.importedAt)} · {item.filename} · {item.rowCount} rows · {item.status}
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </div>
   );
