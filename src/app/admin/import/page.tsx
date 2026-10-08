@@ -70,40 +70,6 @@ export default async function ImportPage() {
       </section>
 
       <section className="rounded-3xl bg-white p-6">
-        <h2 className="font-serif text-2xl">Excel / CSV samples</h2>
-        <p className="mt-2 text-sm text-muted">
-          Open the Excel samples, edit if needed, then Save As CSV UTF-8 and upload below. Ready-to-upload CSV samples are
-          included.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm">
-          <li>
-            <a className="font-semibold text-pine" href="/data/products.csv" download>
-              products.csv
-            </a>{" "}
-            · official catalog
-          </li>
-          <li>
-            <a className="font-semibold text-pine" href="/data/samples/sample-valid-10-products.csv" download>
-              sample-valid-10-products.csv
-            </a>{" "}
-            · ready to upload
-          </li>
-          <li>
-            <a className="font-semibold text-pine" href="/data/samples/sample-valid-10-products.xls" download>
-              sample-valid-10-products.xls
-            </a>{" "}
-            · open in Excel
-          </li>
-          <li>
-            <a className="font-semibold text-pine" href="/data/samples/sample-template-10-products.xls" download>
-              sample-template-10-products.xls
-            </a>{" "}
-            · Excel template
-          </li>
-        </ul>
-      </section>
-
-      <section className="rounded-3xl bg-white p-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="font-serif text-2xl">Official CSV · {file.filename}</h2>
           <a href="/data/products.csv" className="text-sm font-semibold text-pine" download>
