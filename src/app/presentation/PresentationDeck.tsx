@@ -14,8 +14,7 @@ type CsvRow = {
 
 type Props = {
   siteUrl: string;
-  student1: string;
-  student2: string;
+  studentName: string;
   projectTitle: string;
   storeName: string;
   brandColor: string;
@@ -110,16 +109,17 @@ function buildSlides(props: Props) {
   ];
 }
 
-function CoverSlide({ student1, student2, projectTitle, storeName }: Props) {
+function CoverSlide({ studentName, projectTitle, storeName }: Props) {
   return (
     <div className="flex h-full min-h-[28rem] flex-col justify-center">
       <img src="/images/aud-logo.svg" alt="American University in Dubai" className="h-20 w-20" />
       <p className="mt-8 text-sm uppercase tracking-[0.35em] text-gold">COMP101</p>
       <h1 className="mt-4 font-serif text-4xl sm:text-6xl">{projectTitle}</h1>
       <p className="mt-4 text-xl text-sand">{storeName}</p>
-      <div className="mt-10 space-y-2 text-lg">
-        <p>{student1}</p>
-        <p>{student2}</p>
+      <div className="mt-10 text-lg">
+        <p>
+          <span className="text-sand">Student Full Name:</span> {studentName}
+        </p>
       </div>
     </div>
   );

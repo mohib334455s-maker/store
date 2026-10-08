@@ -191,16 +191,21 @@ const screenshots = {
   ),
   "06_Order_Tracking.html": page(
     "Screenshot F — Order Tracking",
-    `<div class="chrome">${siteUrl}/admin/orders</div>
+    `<div class="chrome">${siteUrl}/order/${orderNumber}</div>
     <div class="panel">
-      <h2>Screenshot F — Order Fulfillment with Tracking Number</h2>
-      <p class="muted">Test order</p>
+      <h2>Screenshot F — Order Details / Fulfillment with Tracking Number</h2>
+      <p class="muted">Customer order details page</p>
       <h1>${orderNumber}</h1>
       <p><strong>Status:</strong> shipped / fulfilled</p>
       <p><strong>Tracking number:</strong> ${tracking}</p>
       <p><strong>Customer:</strong> Test Customer</p>
+      <p><strong>Email:</strong> test.customer@northlane.demo</p>
+      <p><strong>Phone:</strong> +971 50 000 1010</p>
+      <p><strong>Shipping:</strong> 123 Trailhead Avenue, Dubai, United Arab Emirates</p>
       <p><strong>Payment:</strong> Manual Payment (Test Mode)</p>
-      <p><strong>Item:</strong> Compact Trail First Aid Kit × 1</p>
+      <p><strong>Item:</strong> Compact Trail First Aid Kit (NL-TRV-002) × 1 · $28.00</p>
+      <p><strong>Subtotal:</strong> $28.00 · <strong>Shipping:</strong> $12.00 · <strong>Total:</strong> $40.00</p>
+      <p class="muted">Also available in admin: ${siteUrl}/admin/orders</p>
     </div>`,
   ),
   "07_Mobile.html": page(
@@ -260,8 +265,7 @@ const reportHtml = `<!DOCTYPE html>
     <h1>COMP101</h1>
     <h2>Project 1: E-Commerce Website</h2>
     <p>Northlane Outfitters — Outdoor E-Commerce Store</p>
-    <p><strong>Student 1 Full Name:</strong> Mohammad Arman<br/>
-    <strong>Student 2 Full Name:</strong> Mohammad Arman</p>
+    <p><strong>Student Full Name:</strong> Mohammad Arman</p>
   </section>
 
   <h2>1. Introduction</h2>

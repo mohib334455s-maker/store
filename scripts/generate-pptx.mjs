@@ -64,11 +64,11 @@ cover.addText("Northlane Outfitters", {
   color: gold,
   fontFace: "Calibri",
 });
-cover.addText("Mohammad Arman\nMohammad Arman", {
+cover.addText("Student Full Name: Mohammad Arman", {
   x: 0.7,
   y: 4.4,
   w: 12,
-  h: 1,
+  h: 0.6,
   fontSize: 18,
   color: cream,
   fontFace: "Calibri",

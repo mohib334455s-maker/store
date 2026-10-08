@@ -48,7 +48,6 @@ export const OOS_TEST_SKU = "NL-TRV-002";
 export const DEMO_ORDER_NUMBER = "NL-10001";
 export const DEMO_TRACKING_NUMBER = "DXB-TRK-12345";
 
-export const STUDENT_1 = "Mohammad Arman";
-export const STUDENT_2 = "Mohammad Arman";
+export const STUDENT_NAME = "Mohammad Arman";
 export const COURSE_NAME = "COMP101";
 export const PROJECT_TITLE = "Project 1: E-Commerce Website";

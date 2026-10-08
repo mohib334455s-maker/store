@@ -14,8 +14,7 @@ import {
   OOS_TEST_SKU,
   PROJECT_TITLE,
   STORE,
-  STUDENT_1,
-  STUDENT_2,
+  STUDENT_NAME,
 } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -48,12 +47,9 @@ export default async function ReportPage() {
           <h1 className="mt-3 font-serif text-4xl">{COURSE_NAME}</h1>
           <p className="mt-2 font-serif text-2xl">{PROJECT_TITLE}</p>
           <p className="mt-6 text-lg">{STORE.legalName} — Outdoor E-Commerce Store</p>
-          <div className="mt-8 grid gap-2 text-sm">
+          <div className="mt-8 text-sm">
             <p>
-              <span className="text-muted">Student 1 Full Name:</span> {STUDENT_1}
-            </p>
-            <p>
-              <span className="text-muted">Student 2 Full Name:</span> {STUDENT_2}
+              <span className="text-muted">Student Full Name:</span> {STUDENT_NAME}
             </p>
           </div>
         </section>
@@ -335,9 +331,21 @@ export default async function ReportPage() {
             <div className="mt-4 rounded-3xl border border-sand p-6">
               <p className="text-xs uppercase tracking-[0.2em] text-gold-dark">Test order</p>
               <p className="mt-2 font-serif text-3xl">{demoOrder.orderNumber}</p>
+              <p className="mt-2 text-sm">
+                Full order details page:{" "}
+                <a className="font-semibold text-pine" href={`${siteUrl}/order/${demoOrder.orderNumber}`}>
+                  {siteUrl}/order/{demoOrder.orderNumber}
+                </a>
+              </p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
                 <p>
                   <span className="text-muted">Customer:</span> {demoOrder.customerName}
+                </p>
+                <p>
+                  <span className="text-muted">Email:</span> {demoOrder.customerEmail}
+                </p>
+                <p>
+                  <span className="text-muted">Phone:</span> {demoOrder.customerPhone}
                 </p>
                 <p>
                   <span className="text-muted">Payment:</span> {demoOrder.paymentMethod}
@@ -349,7 +357,17 @@ export default async function ReportPage() {
                   <span className="text-muted">Tracking number:</span> <strong>{demoOrder.trackingNumber}</strong>
                 </p>
                 <p>
+                  <span className="text-muted">Shipping address:</span> {demoOrder.shippingAddress}, {demoOrder.city},{" "}
+                  {demoOrder.country}
+                </p>
+                <p>
                   <span className="text-muted">Fulfilled:</span> {formatDate(demoOrder.fulfilledAt)}
+                </p>
+                <p>
+                  <span className="text-muted">Subtotal:</span> {money(demoOrder.subtotal)}
+                </p>
+                <p>
+                  <span className="text-muted">Shipping:</span> {money(demoOrder.shipping)}
                 </p>
                 <p>
                   <span className="text-muted">Total:</span> {money(demoOrder.total)}
@@ -358,7 +376,7 @@ export default async function ReportPage() {
               <ul className="mt-4 text-sm">
                 {demoItems.map((item) => (
                   <li key={item.id}>
-                    {item.title} · {item.sku} × {item.quantity}
+                    {item.title} · {item.sku} × {item.quantity} · {money(item.unitPrice)}
                   </li>
                 ))}
               </ul>

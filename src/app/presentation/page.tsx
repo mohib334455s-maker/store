@@ -11,8 +11,7 @@ import {
   OOS_TEST_SKU,
   PROJECT_TITLE,
   STORE,
-  STUDENT_1,
-  STUDENT_2,
+  STUDENT_NAME,
 } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -34,8 +33,7 @@ export default async function PresentationPage() {
   return (
     <PresentationDeck
       siteUrl={siteUrl}
-      student1={STUDENT_1}
-      student2={STUDENT_2}
+      studentName={STUDENT_NAME}
       projectTitle={PROJECT_TITLE}
       storeName={STORE.legalName}
       brandColor={STORE.brandColor}
