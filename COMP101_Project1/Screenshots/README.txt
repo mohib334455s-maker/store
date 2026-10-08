@@ -14,9 +14,9 @@ A CSV product file              /admin/import  and  /report
 B Successful product import     /admin/import
 C Final website                 /
 D Inventory tracking            /admin/products
-E Out-of-Stock product          /shop/PL-TRV-002
+E Out-of-Stock product          /shop/NL-TRV-002
 F Order fulfillment/tracking    /admin/orders
 G Mobile website                Chrome F12 device toolbar on /
 
 Website Username: admin
-Website Password: Peakline101
+Website Password: Northlane101

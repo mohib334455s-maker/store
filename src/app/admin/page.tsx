@@ -12,7 +12,7 @@ export default async function AdminHomePage() {
     <div className="space-y-8">
       <div>
         <p className="text-xs uppercase tracking-[0.25em] text-gold-dark">Dashboard</p>
-        <h1 className="mt-2 font-serif text-4xl">Peakline operations</h1>
+        <h1 className="mt-2 font-serif text-4xl">Store operations</h1>
       </div>
       <div className="grid gap-4 md:grid-cols-4">
         {[

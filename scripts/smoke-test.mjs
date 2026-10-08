@@ -30,7 +30,7 @@ if (!ready) {
   process.exit(1);
 }
 
-const urls = ["/", "/shop", "/shop/PL-TRV-002", "/report", "/presentation", "/api/health", "/login"];
+const urls = ["/", "/shop", "/shop/NL-TRV-002", "/report", "/presentation", "/api/health", "/login"];
 let failed = 0;
 
 for (const path of urls) {
@@ -38,7 +38,7 @@ for (const path of urls) {
     const res = await fetch(base + path);
     const text = await res.text();
     const marks = [];
-    if (text.includes("Peakline")) marks.push("Peakline");
+    if (text.includes("Northlane")) marks.push("Northlane");
     if (text.includes("Out of Stock")) marks.push("OOS");
     if (text.includes("DXB-TRK-12345")) marks.push("TRACK");
     console.log(`${path} -> ${res.status} len=${text.length} ${marks.join(",")}`);

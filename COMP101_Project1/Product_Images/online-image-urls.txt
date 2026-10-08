@@ -1,31 +1,31 @@
 All product images are hosted online. The CSV ImageURL column uses direct image links, not local computer file paths.
 
-PL-HIK-001 Alpine Ridge Backpack 45L
+NL-HIK-001 Alpine Ridge Backpack 45L
 https://images.pexels.com/photos/1363956/pexels-photo-1363956.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-HIK-002 Merino Trail Socks 3-Pack
+NL-HIK-002 Merino Trail Socks 3-Pack
 https://images.pexels.com/photos/4495760/pexels-photo-4495760.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-HIK-003 Carbonlite Trekking Poles
+NL-HIK-003 Carbonlite Trekking Poles
 https://images.pexels.com/photos/4763005/pexels-photo-4763005.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-HIK-004 Summit Trail Running Shoes
+NL-HIK-004 Summit Trail Running Shoes
 https://images.pexels.com/photos/27972222/pexels-photo-27972222.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-CMP-001 Ultralight 2-Person Tent
+NL-CMP-001 Ultralight 2-Person Tent
 https://images.pexels.com/photos/9290539/pexels-photo-9290539.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-CMP-002 Alpine Down Sleeping Bag
+NL-CMP-002 Alpine Down Sleeping Bag
 https://images.pexels.com/photos/10762580/pexels-photo-10762580.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-CMP-003 Titanium Camp Stove
+NL-CMP-003 Titanium Camp Stove
 https://images.pexels.com/photos/6831220/pexels-photo-6831220.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-CMP-004 Insulated Steel Bottle 1L
+NL-CMP-004 Insulated Steel Bottle 1L
 https://images.pexels.com/photos/10939968/pexels-photo-10939968.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-TRV-001 Packable Storm Jacket
+NL-TRV-001 Packable Storm Jacket
 https://images.pexels.com/photos/12505397/pexels-photo-12505397.jpeg?auto=compress&cs=tinysrgb&w=1600
 
-PL-TRV-002 Compact Trail First Aid Kit
+NL-TRV-002 Compact Trail First Aid Kit
 https://images.pexels.com/photos/5149759/pexels-photo-5149759.jpeg?auto=compress&cs=tinysrgb&w=1600

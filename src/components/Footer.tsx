@@ -11,6 +11,9 @@ export function Footer() {
           <p className="mt-5 max-w-md text-sm leading-7 text-sand">
             {STORE.tagline} Premium outdoor equipment for hiking, camping, and travel.
           </p>
+          <p className="mt-4 text-sm text-sand">
+            Founder: <span className="text-cream">{STORE.founder}</span>
+          </p>
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Shop</p>
@@ -32,11 +35,16 @@ export function Footer() {
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-gold">Contact</p>
           <div className="mt-4 flex flex-col gap-2.5 text-sm text-sand">
+            <p>{STORE.founder}</p>
+            <a href={`tel:${STORE.phone.replace(/\s/g, "")}`} className="hover:text-gold">
+              {STORE.phone}
+            </a>
+            <a href={`mailto:${STORE.email}`} className="break-all hover:text-gold">
+              {STORE.email}
+            </a>
             <p>{STORE.address}</p>
-            <p>{STORE.phone}</p>
-            <p>{STORE.email}</p>
             <Link href="/about" className="text-cream transition hover:text-gold">
-              About Peakline
+              About {STORE.name}
             </Link>
           </div>
         </div>

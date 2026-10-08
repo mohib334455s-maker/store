@@ -62,7 +62,7 @@ export default async function PresentationPage() {
         imageUrl: oos?.imageUrl ?? "",
       }}
       order={{
-        orderNumber: demoOrder?.orderNumber ?? "PKL-10001",
+        orderNumber: demoOrder?.orderNumber ?? "NL-10001",
         status: demoOrder?.status ?? "shipped",
         trackingNumber: demoOrder?.trackingNumber ?? DEMO_TRACKING_NUMBER,
         customerName: demoOrder?.customerName ?? "Test Customer",

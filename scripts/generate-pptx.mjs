@@ -17,16 +17,16 @@ const cream = "F4F0E8";
 const ink = "1C1917";
 
 const products = [
-  ["PL-HIK-001", "Alpine Ridge Backpack 45L", "Hiking", "189.00", "24"],
-  ["PL-HIK-002", "Merino Trail Socks 3-Pack", "Hiking", "36.00", "48"],
-  ["PL-HIK-003", "Carbonlite Trekking Poles", "Hiking", "129.00", "18"],
-  ["PL-HIK-004", "Summit Trail Running Shoes", "Hiking", "158.00", "12"],
-  ["PL-CMP-001", "Ultralight 2-Person Tent", "Camping", "249.00", "8"],
-  ["PL-CMP-002", "Alpine Down Sleeping Bag", "Camping", "219.00", "10"],
-  ["PL-CMP-003", "Titanium Camp Stove", "Camping", "89.00", "22"],
-  ["PL-CMP-004", "Insulated Steel Bottle 1L", "Camping", "42.00", "35"],
-  ["PL-TRV-001", "Packable Storm Jacket", "Travel", "164.00", "15"],
-  ["PL-TRV-002", "Compact Trail First Aid Kit", "Travel", "28.00", "1"],
+  ["NL-HIK-001", "Alpine Ridge Backpack 45L", "Hiking", "189.00", "24"],
+  ["NL-HIK-002", "Merino Trail Socks 3-Pack", "Hiking", "36.00", "48"],
+  ["NL-HIK-003", "Carbonlite Trekking Poles", "Hiking", "129.00", "18"],
+  ["NL-HIK-004", "Summit Trail Running Shoes", "Hiking", "158.00", "12"],
+  ["NL-CMP-001", "Ultralight 2-Person Tent", "Camping", "249.00", "8"],
+  ["NL-CMP-002", "Alpine Down Sleeping Bag", "Camping", "219.00", "10"],
+  ["NL-CMP-003", "Titanium Camp Stove", "Camping", "89.00", "22"],
+  ["NL-CMP-004", "Insulated Steel Bottle 1L", "Camping", "42.00", "35"],
+  ["NL-TRV-001", "Packable Storm Jacket", "Travel", "164.00", "15"],
+  ["NL-TRV-002", "Compact Trail First Aid Kit", "Travel", "28.00", "1"],
 ];
 
 function addChrome(slide, title) {
@@ -55,7 +55,7 @@ cover.addText("Project 1: E-Commerce Website", {
   color: cream,
   bold: true,
 });
-cover.addText("Peakline Outfitters", {
+cover.addText("Northlane Outfitters", {
   x: 0.7,
   y: 3.3,
   w: 12,
@@ -64,7 +64,7 @@ cover.addText("Peakline Outfitters", {
   color: gold,
   fontFace: "Calibri",
 });
-cover.addText("Alex Morgan\nSam Rivera", {
+cover.addText("Mohammad Arman\nMohammad Arman", {
   x: 0.7,
   y: 4.4,
   w: 12,
@@ -76,7 +76,7 @@ cover.addText("Alex Morgan\nSam Rivera", {
 
 const web = pptx.addSlide();
 addChrome(web, "LIVE WEBSITE");
-web.addText("Peakline Outfitters", {
+web.addText("Northlane Outfitters", {
   x: 0.7,
   y: 1.1,
   w: 12,
@@ -86,7 +86,7 @@ web.addText("Peakline Outfitters", {
   fontFace: "Georgia",
 });
 web.addText(
-  "English-language outdoor store selling hiking, camping, and travel gear. Ten products were imported from CSV with online image URLs, live inventory, test checkout, fulfillment, and tracking numbers.\n\nPlatform: Peakline Commerce (Next.js e-commerce platform)\nCategories: Hiking · Camping · Travel\nLive website: http://localhost:3000\nLogin: admin / Peakline101\nAcademic deck: /presentation",
+  "English-language outdoor store selling hiking, camping, and travel gear. Ten products were imported from CSV with online image URLs, live inventory, test checkout, fulfillment, and tracking numbers.\n\nPlatform: Northlane Commerce (Next.js e-commerce platform)\nCategories: Hiking · Camping · Travel\nLive website: http://localhost:3000\nLogin: admin / Northlane101\nFounder: Mohammad Arman\nAcademic deck: /presentation",
   { x: 0.7, y: 2, w: 12, h: 4.2, fontSize: 18, color: cream, fontFace: "Calibri" },
 );
 
@@ -179,7 +179,7 @@ inv.addTable(
       { text: "Title", options: { fill: { color: gold }, color: ink, bold: true } },
       { text: "Stock after demonstration", options: { fill: { color: gold }, color: ink, bold: true } },
     ],
-    ...products.map((row) => [row[0], row[1], row[0] === "PL-TRV-002" ? "0 — Out of Stock" : row[4]]),
+    ...products.map((row) => [row[0], row[1], row[0] === "NL-TRV-002" ? "0 — Out of Stock" : row[4]]),
   ],
   { x: 0.7, y: 1.8, w: 12, fontSize: 12, fontFace: "Calibri", fill: { color: cream }, color: ink },
 );
@@ -196,13 +196,13 @@ oos.addText("Compact Trail First Aid Kit", {
   fontFace: "Georgia",
 });
 oos.addText(
-  "1. Stock quantity set to 1\n2. Live store opened\n3. Test purchase completed with Manual Payment\n4. Stock became 0\n5. Product page displays Out of Stock\n\nSKU: PL-TRV-002",
+  "1. Stock quantity set to 1\n2. Live store opened\n3. Test purchase completed with Manual Payment\n4. Stock became 0\n5. Product page displays Out of Stock\n\nSKU: NL-TRV-002",
   { x: 0.7, y: 2.2, w: 12, h: 3.5, fontSize: 20, color: cream, fontFace: "Calibri" },
 );
 
 const order = pptx.addSlide();
 addChrome(order, "ORDER FULFILLMENT");
-order.addText("Test order PKL-10001", {
+order.addText("Test order NL-10001", {
   x: 0.7,
   y: 1.3,
   w: 12,

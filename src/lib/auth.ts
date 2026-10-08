@@ -3,8 +3,8 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { ADMIN_PASSWORD, ADMIN_USERNAME } from "@/lib/store";
 
-const COOKIE = "peakline_admin";
-const SECRET = process.env.ADMIN_SESSION_SECRET ?? "peakline-comp101-session";
+const COOKIE = "northlane_admin";
+const SECRET = process.env.ADMIN_SESSION_SECRET ?? "northlane-comp101-session";
 
 function sign(payload: string) {
   return createHmac("sha256", SECRET).update(payload).digest("hex");

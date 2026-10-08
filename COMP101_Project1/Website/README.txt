@@ -1,4 +1,4 @@
-Peakline Outfitters live store
+Northlane Outfitters live store
 
 Start the website:
 1. Open a terminal in the project root
@@ -26,6 +26,6 @@ Academic documents:
 - /presentation
 
 Website Username: admin
-Website Password: Peakline101
+Website Password: Northlane101
 
 Final website link for the report/presentation: http://localhost:3000

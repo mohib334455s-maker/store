@@ -1,4 +1,4 @@
-# Peakline Outfitters
+# Northlane Outfitters
 
 English outdoor e-commerce store for COMP101 Project 1.
 
@@ -14,7 +14,13 @@ Open [http://127.0.0.1:3000](http://127.0.0.1:3000)
 ## Login
 
 - Username: `admin`
-- Password: `Peakline101`
+- Password: `Northlane101`
+
+## Founder contact
+
+- Name: Mohammad Arman
+- Phone: +971 52 172 8378
+- Email: armanamir583@gmail.com
 
 ## Features
 

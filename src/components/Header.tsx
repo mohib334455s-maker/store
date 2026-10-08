@@ -68,7 +68,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/about" onClick={() => setOpen(false)}>
-              About Peakline
+              About
             </Link>
             <Link href="/cart" onClick={() => setOpen(false)}>
               Cart

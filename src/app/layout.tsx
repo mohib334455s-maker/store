@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: `${STORE.legalName} | Outdoor Gear Store`,
     template: `%s | ${STORE.name}`,
   },
-  description: "Premium hiking, camping, and travel equipment from Peakline Outfitters.",
+  description: "Premium hiking, camping, and travel equipment from Northlane Outfitters.",
   icons: {
     icon: "/images/logo-mark.svg",
   },

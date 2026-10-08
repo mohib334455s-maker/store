@@ -120,7 +120,7 @@ export async function createOrder(input: {
   const subtotal = lines.reduce((sum, line) => sum + line.lineTotal, 0);
   const shipping = subtotal >= 150 ? 0 : SHIPPING_FLAT;
   const total = subtotal + shipping;
-  const orderNumber = input.orderNumber ?? `PKL-${Date.now().toString().slice(-8)}`;
+  const orderNumber = input.orderNumber ?? `NL-${Date.now().toString().slice(-8)}`;
 
   const order = await createOrderRecord({
     orderNumber,
@@ -169,7 +169,7 @@ export async function createDemonstrationOrder() {
     items: [{ sku: OOS_TEST_SKU, quantity: 1 }],
     customer: {
       name: "Test Customer",
-      email: "test.customer@peakline.demo",
+      email: "test.customer@northlane.demo",
       phone: "+971 50 000 1010",
       address: "123 Trailhead Avenue",
       city: "Dubai",

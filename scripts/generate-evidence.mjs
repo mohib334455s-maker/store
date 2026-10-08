@@ -48,9 +48,9 @@ const rows = csvText
 
 const siteUrl = "http://localhost:3000";
 const username = "admin";
-const password = "Peakline101";
+const password = "Northlane101";
 const tracking = "DXB-TRK-12345";
-const orderNumber = "PKL-10001";
+const orderNumber = "NL-10001";
 
 function page(title, body) {
   return `<!DOCTYPE html>
@@ -61,10 +61,10 @@ function page(title, body) {
 <style>
   body { margin: 0; font-family: Georgia, serif; background: #f4f0e8; color: #1c1917; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 28px; }
-  .chrome { background: #1a5f4a; color: #f4f0e8; padding: 14px 18px; border-radius: 16px 16px 0 0; font-family: Calibri, Arial, sans-serif; font-size: 13px; }
+  .chrome { background: #0B3D4A; color: #f4f0e8; padding: 14px 18px; border-radius: 16px 16px 0 0; font-family: Calibri, Arial, sans-serif; font-size: 13px; }
   .panel { background: white; border: 1px solid #d7cfc2; border-radius: 0 0 16px 16px; padding: 18px; box-shadow: 0 18px 40px rgba(28,25,23,.08); }
   h1 { margin: 0 0 8px; font-size: 28px; }
-  h2 { margin: 0 0 12px; font-size: 22px; color: #1a5f4a; }
+  h2 { margin: 0 0 12px; font-size: 22px; color: #0B3D4A; }
   p, li { font-family: Calibri, Arial, sans-serif; line-height: 1.5; }
   table { width: 100%; border-collapse: collapse; font-family: Calibri, Arial, sans-serif; font-size: 12px; }
   th, td { border-bottom: 1px solid #e7dfd2; padding: 8px; text-align: left; vertical-align: top; }
@@ -72,7 +72,7 @@ function page(title, body) {
   .badge { display: inline-block; background: #1c1917; color: white; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-family: Calibri, Arial, sans-serif; text-transform: uppercase; }
   .oos { background: #fee2e2; border: 1px solid #fecaca; border-radius: 16px; padding: 16px; }
   .phone { width: 320px; margin: 0 auto; border: 10px solid #1c1917; border-radius: 28px; overflow: hidden; background: #f4f0e8; }
-  .phone-top { background: #1a5f4a; color: #f4f0e8; padding: 16px; }
+  .phone-top { background: #0B3D4A; color: #f4f0e8; padding: 16px; }
   .gold { color: #c4a35a; }
   .muted { color: #6b645b; }
   img { max-width: 100%; display: block; }
@@ -148,8 +148,8 @@ const screenshots = {
     "Screenshot C — Final Website",
     `<div class="chrome">${siteUrl}</div>
     <div class="panel" style="padding:0;overflow:hidden">
-      <div style="background:#1a5f4a;color:#f4f0e8;padding:40px">
-        <p class="gold" style="letter-spacing:.3em;text-transform:uppercase;font-family:Calibri,Arial,sans-serif;font-size:12px">Peakline Outfitters</p>
+      <div style="background:#0B3D4A;color:#f4f0e8;padding:40px">
+        <p class="gold" style="letter-spacing:.3em;text-transform:uppercase;font-family:Calibri,Arial,sans-serif;font-size:12px">Northlane Outfitters</p>
         <h1>Gear for the trail ahead.</h1>
         <p style="font-family:Calibri,Arial,sans-serif;max-width:520px">Live English storefront with ten imported products, online images, inventory tracking, checkout, and fulfillment.</p>
         <p style="font-family:Calibri,Arial,sans-serif"><strong>Final website link:</strong> ${siteUrl}</p>
@@ -166,8 +166,8 @@ const screenshots = {
         <tbody>
           ${rows
             .map((r) => {
-              const stock = r.sku === "PL-TRV-002" ? "0" : r.stock;
-              const label = r.sku === "PL-TRV-002" ? "Out of Stock" : "Enabled";
+              const stock = r.sku === "NL-TRV-002" ? "0" : r.stock;
+              const label = r.sku === "NL-TRV-002" ? "Out of Stock" : "Enabled";
               return `<tr><td>${r.sku}</td><td>${r.title}</td><td>${stock}</td><td>${label}</td></tr>`;
             })
             .join("")}
@@ -177,14 +177,14 @@ const screenshots = {
   ),
   "05_Out_of_Stock.html": page(
     "Screenshot E — Out of Stock",
-    `<div class="chrome">${siteUrl}/shop/PL-TRV-002</div>
+    `<div class="chrome">${siteUrl}/shop/NL-TRV-002</div>
     <div class="panel">
       <h2>Screenshot E — Out of Stock Product</h2>
       <div class="oos">
-        <img src="${rows.find((r) => r.sku === "PL-TRV-002").imageUrl}" alt="Compact Trail First Aid Kit" style="height:220px;width:100%;object-fit:cover;border-radius:12px" />
+        <img src="${rows.find((r) => r.sku === "NL-TRV-002").imageUrl}" alt="Compact Trail First Aid Kit" style="height:220px;width:100%;object-fit:cover;border-radius:12px" />
         <p style="margin-top:14px"><span class="badge">Out of Stock</span></p>
         <h1>Compact Trail First Aid Kit</h1>
-        <p>SKU: PL-TRV-002</p>
+        <p>SKU: NL-TRV-002</p>
         <p>Imported stock quantity: 1 → purchased with Manual Payment (Test Mode) → stock became 0 → product marked Out of Stock.</p>
       </div>
     </div>`,
@@ -210,7 +210,7 @@ const screenshots = {
       <h2>Screenshot G — Mobile Website</h2>
       <div class="phone">
         <div class="phone-top">
-          <p class="gold" style="font-family:Calibri,Arial,sans-serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase">Peakline</p>
+          <p class="gold" style="font-family:Calibri,Arial,sans-serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase">Northlane</p>
           <h1 style="font-size:28px">Gear for the trail ahead.</h1>
         </div>
         ${rows
@@ -236,18 +236,18 @@ const reportHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>COMP101 Project 1 Report — Peakline Outfitters</title>
+<title>COMP101 Project 1 Report — Northlane Outfitters</title>
 <style>
   @page { margin: 18mm; }
   body { font-family: Georgia, serif; color: #1c1917; line-height: 1.55; max-width: 860px; margin: 0 auto; padding: 32px 24px; }
-  h1, h2 { color: #1a5f4a; }
+  h1, h2 { color: #0B3D4A; }
   .cover { text-align: center; border-bottom: 1px solid #d7cfc2; padding-bottom: 28px; margin-bottom: 28px; }
   .box { background: #f4f0e8; border-radius: 14px; padding: 16px; }
   .muted { color: #6b645b; }
   table { width: 100%; border-collapse: collapse; font-family: Calibri, Arial, sans-serif; font-size: 12px; }
   th, td { border: 1px solid #e7dfd2; padding: 7px; text-align: left; vertical-align: top; }
   th { background: #f4f0e8; }
-  a { color: #1a5f4a; }
+  a { color: #0B3D4A; }
   .print-tip { font-family: Calibri, Arial, sans-serif; background: #13261f; color: #f4f0e8; padding: 12px 16px; border-radius: 12px; margin-bottom: 24px; }
   @media print { .print-tip { display: none; } }
 </style>
@@ -255,20 +255,22 @@ const reportHtml = `<!DOCTYPE html>
 <body>
   <div class="print-tip">Open this file in Chrome → Ctrl+P → Save as PDF → name it COMP101_Project1_Report.pdf</div>
   <section class="cover">
-    <svg width="96" height="96" viewBox="0 0 96 96" aria-label="AUD mark placeholder"><circle cx="48" cy="48" r="46" fill="#1a5f4a"/><text x="48" y="54" text-anchor="middle" fill="#c4a35a" font-family="Georgia" font-size="18">AUD</text></svg>
+    <svg width="96" height="96" viewBox="0 0 96 96" aria-label="AUD mark placeholder"><circle cx="48" cy="48" r="46" fill="#0B3D4A"/><text x="48" y="54" text-anchor="middle" fill="#c4a35a" font-family="Georgia" font-size="18">AUD</text></svg>
     <p class="muted">American University in Dubai</p>
     <h1>COMP101</h1>
     <h2>Project 1: E-Commerce Website</h2>
-    <p>Peakline Outfitters — Outdoor E-Commerce Store</p>
-    <p><strong>Student 1 Full Name:</strong> Alex Morgan<br/>
-    <strong>Student 2 Full Name:</strong> Sam Rivera</p>
+    <p>Northlane Outfitters — Outdoor E-Commerce Store</p>
+    <p><strong>Student 1 Full Name:</strong> Mohammad Arman<br/>
+    <strong>Student 2 Full Name:</strong> Mohammad Arman</p>
   </section>
 
   <h2>1. Introduction</h2>
-  <p>This project implements a complete English-language e-commerce website named Peakline Outfitters. The store sells premium outdoor equipment organized into three product categories: Hiking, Camping, and Travel. The catalog contains exactly ten products. Each product includes a unique SKU, title, category, numerical price, numerical stock quantity, professional English description, and an online ImageURL.</p>
-  <p>The selected platform is Peakline Commerce (Next.js e-commerce platform), an accepted alternative to Wix Stores / Shopify for COMP101. It provides the required storefront, CSV product import, inventory tracking, test checkout, order fulfillment, and tracking-number workflow. The brand identity uses the Peakline mountain-mark logo and the brand color Peakline Pine (#1A5F4A).</p>
-  <p>Product images are hosted online and referenced through ImageURL values in the CSV. Inventory tracking is enabled. The Compact Trail First Aid Kit (PL-TRV-002) was prepared with stock quantity 1, purchased through Manual Payment in test mode, reduced to stock 0, and displayed as Out of Stock. The test order was fulfilled with tracking number ${tracking}.</p>
+  <p>This project implements a complete English-language e-commerce website named Northlane Outfitters. The store sells premium outdoor equipment organized into three product categories: Hiking, Camping, and Travel. The catalog contains exactly ten products. Each product includes a unique SKU, title, category, numerical price, numerical stock quantity, professional English description, and an online ImageURL.</p>
+  <p>The selected platform is Northlane Commerce (Next.js e-commerce platform), an accepted alternative to Wix Stores / Shopify for COMP101. It provides the required storefront, CSV product import, inventory tracking, test checkout, order fulfillment, and tracking-number workflow. The brand identity uses the Northlane compass-mark logo and the brand color Northlane Tide (#0B3D4A).</p>
+  <p>Product images are hosted online and referenced through ImageURL values in the CSV. Inventory tracking is enabled. The Compact Trail First Aid Kit (NL-TRV-002) was prepared with stock quantity 1, purchased through Manual Payment in test mode, reduced to stock 0, and displayed as Out of Stock. The test order was fulfilled with tracking number ${tracking}.</p>
   <div class="box">
+    <p><strong>Founder contact</strong></p>
+    <p>Name: Mohammad Arman<br/>Phone: +971 52 172 83 78<br/>Email: armanamir583@gmail.com</p>
     <p><strong>Website access for grading</strong></p>
     <p>Website Username: ${username}<br/>Website Password: ${password}</p>
     <p>Final website link: <a href="${siteUrl}">${siteUrl}</a><br/>
@@ -280,13 +282,13 @@ const reportHtml = `<!DOCTYPE html>
   <h2>2. Development Process</h2>
   <ol>
     <li><strong>Branding.</strong> Store concept defined as a premium outdoor outfitter.</li>
-    <li><strong>Logo.</strong> Mountain-peak mark applied across header, footer, dashboard, report, and presentation.</li>
-    <li><strong>Brand color.</strong> #1A5F4A applied to buttons, navigation, and admin actions.</li>
+    <li><strong>Logo.</strong> Compass mark applied across header, footer, dashboard, report, and presentation.</li>
+    <li><strong>Brand color.</strong> #0B3D4A applied to buttons, navigation, and admin actions.</li>
     <li><strong>CSV creation.</strong> Official headers SKU,Title,Category,Price,Stock,Description,ImageURL used for 10 products.</li>
     <li><strong>Online images.</strong> Direct online image links placed in ImageURL. No local file paths.</li>
     <li><strong>CSV import.</strong> All products uploaded through the dashboard import process.</li>
     <li><strong>Inventory tracking.</strong> Stock quantities tracked and reduced during checkout.</li>
-    <li><strong>Out-of-Stock test.</strong> PL-TRV-002 set to 1, purchased, then shown as Out of Stock.</li>
+    <li><strong>Out-of-Stock test.</strong> NL-TRV-002 set to 1, purchased, then shown as Out of Stock.</li>
     <li><strong>Fulfillment.</strong> Order ${orderNumber} marked shipped with tracking ${tracking}.</li>
     <li><strong>Mobile testing.</strong> Storefront verified on phone-width layout.</li>
   </ol>
@@ -334,12 +336,12 @@ A CSV product file              /admin/import  and  /report
 B Successful product import     /admin/import
 C Final website                 /
 D Inventory tracking            /admin/products
-E Out-of-Stock product          /shop/PL-TRV-002
+E Out-of-Stock product          /shop/NL-TRV-002
 F Order fulfillment/tracking    /admin/orders
 G Mobile website                Chrome F12 device toolbar on /
 
 Website Username: admin
-Website Password: Peakline101
+Website Password: Northlane101
 `;
 
 fs.writeFileSync(path.join(outScreenshots, "README.txt"), howTo);
@@ -358,7 +360,7 @@ Replace [STUDENT 1 FULL NAME] and [STUDENT 2 FULL NAME] before submission.
 
 fs.writeFileSync(path.join(outReport, "README.txt"), reportReadme);
 
-const websiteReadme = `Peakline Outfitters live store
+const websiteReadme = `Northlane Outfitters live store
 
 Start the website:
 1. Open a terminal in the project root
@@ -386,7 +388,7 @@ Academic documents:
 - /presentation
 
 Website Username: admin
-Website Password: Peakline101
+Website Password: Northlane101
 
 Final website link for the report/presentation: http://localhost:3000
 `;

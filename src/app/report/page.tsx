@@ -37,7 +37,7 @@ export default async function ReportPage() {
   return (
     <div className="bg-[#f7f4ee] text-ink">
       <div className="no-print mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
-        <p className="text-sm text-muted">COMP101 academic report · live evidence from the Peakline store</p>
+        <p className="text-sm text-muted">COMP101 academic report · live evidence from the Northlane store</p>
         <PrintButton />
       </div>
 
@@ -47,7 +47,7 @@ export default async function ReportPage() {
           <p className="mt-6 text-xs uppercase tracking-[0.35em] text-gold-dark">American University in Dubai</p>
           <h1 className="mt-3 font-serif text-4xl">{COURSE_NAME}</h1>
           <p className="mt-2 font-serif text-2xl">{PROJECT_TITLE}</p>
-          <p className="mt-6 text-lg">Peakline Outfitters — Outdoor E-Commerce Store</p>
+          <p className="mt-6 text-lg">{STORE.legalName} — Outdoor E-Commerce Store</p>
           <div className="mt-8 grid gap-2 text-sm">
             <p>
               <span className="text-muted">Student 1 Full Name:</span> {STUDENT_1}
@@ -69,7 +69,7 @@ export default async function ReportPage() {
           <p className="mt-4 leading-7">
             The selected platform is {STORE.platform}. This is an accepted e-commerce implementation for COMP101 because it
             provides the required storefront, CSV product import, inventory tracking, test checkout, order fulfillment, and
-            tracking-number workflow. The brand identity uses the Peakline mountain-mark logo and the brand color{" "}
+            tracking-number workflow. The brand identity uses the Northlane compass-mark logo and the brand color{" "}
             {STORE.brandColorName} ({STORE.brandColor}), which appears on buttons, navigation, and dashboard actions.
           </p>
           <p className="mt-4 leading-7">
@@ -247,7 +247,7 @@ export default async function ReportPage() {
               <span className="ml-3 text-xs text-muted">{siteUrl}</span>
             </div>
             <div className="relative min-h-56 bg-pine p-8 text-cream">
-              <p className="text-xs uppercase tracking-[0.3em] text-gold">Peakline Outfitters</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-gold">{STORE.legalName}</p>
               <p className="mt-3 font-serif text-4xl">Gear for the trail ahead.</p>
               <p className="mt-3 max-w-lg text-sm text-sand">
                 Live English storefront with ten imported products, online images, and real inventory.
@@ -357,7 +357,7 @@ export default async function ReportPage() {
           </p>
           <div className="mx-auto mt-6 w-[320px] overflow-hidden rounded-[2rem] border-8 border-ink bg-cream shadow-2xl">
             <div className="bg-pine px-4 py-4 text-cream">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold">Peakline</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-gold">{STORE.name}</p>
               <p className="font-serif text-2xl">Gear for the trail ahead.</p>
             </div>
             <div className="grid grid-cols-1 gap-3 p-3">

@@ -131,8 +131,8 @@ function WebsiteSlide({ siteUrl, storeName, platform }: Props) {
       <p className="text-sm uppercase tracking-[0.3em] text-gold">Live website</p>
       <h2 className="mt-3 font-serif text-4xl">{storeName}</h2>
       <p className="mt-4 max-w-3xl text-lg leading-8 text-sand">
-        Peakline is an English-language outdoor store selling hiking, camping, and travel equipment. The catalog contains ten
-        products imported from CSV, with online images and live stock tracking.
+        {storeName} is an English-language outdoor store selling hiking, camping, and travel equipment. The catalog contains
+        ten products imported from CSV, with online images and live stock tracking.
       </p>
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
         {["Hiking", "Camping", "Travel"].map((category) => (
@@ -317,7 +317,7 @@ function MobileSlide({ products, siteUrl }: { products: Props["products"]; siteU
       </div>
       <div className="mx-auto w-[230px] overflow-hidden rounded-[2rem] border-4 border-white/20 bg-cream text-ink">
         <div className="bg-pine p-4 text-cream">
-          <p className="text-[10px] uppercase tracking-[0.25em] text-gold">Peakline</p>
+          <p className="text-[10px] uppercase tracking-[0.25em] text-gold">Northlane</p>
           <p className="font-serif text-xl">Trail gear</p>
         </div>
         {products.slice(0, 2).map((product) => (
