@@ -86,8 +86,26 @@ export default async function ReportPage() {
               <br />
               Website Password: {ADMIN_PASSWORD}
             </p>
-            <p className="mt-2 text-sm text-muted">
-              Sign in at {siteUrl}/login to open the store dashboard, CSV import, inventory, and order fulfillment screens.
+            <p className="mt-3 text-sm leading-7">
+              Final website link:{" "}
+              <a className="font-semibold text-pine" href={siteUrl}>
+                {siteUrl}
+              </a>
+              <br />
+              Dashboard login:{" "}
+              <a className="font-semibold text-pine" href={`${siteUrl}/login`}>
+                {siteUrl}/login
+              </a>
+              <br />
+              Report page:{" "}
+              <a className="font-semibold text-pine" href={`${siteUrl}/report`}>
+                {siteUrl}/report
+              </a>
+              <br />
+              Presentation page:{" "}
+              <a className="font-semibold text-pine" href={`${siteUrl}/presentation`}>
+                {siteUrl}/presentation
+              </a>
             </p>
           </div>
         </section>
@@ -96,58 +114,59 @@ export default async function ReportPage() {
           <h2 className="font-serif text-3xl">2. Development Process</h2>
           <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7">
             <li>
-              <strong>Branding.</strong> The store concept was defined as a premium outdoor outfitter with a restrained
-              English catalog and a consistent visual system.
+              <strong>Branding.</strong> Store concept defined as a premium outdoor outfitter.
             </li>
             <li>
-              <strong>Logo.</strong> A mountain-peak mark was created and placed in the header, footer, dashboard, report, and
-              presentation.
+              <strong>Logo.</strong> Compass mark applied across header, footer, dashboard, report, and presentation.
             </li>
             <li>
-              <strong>Brand color.</strong> {STORE.brandColor} was selected and implemented on buttons, category cards, and
-              administrative actions.
+              <strong>Brand color.</strong> {STORE.brandColor} applied to buttons, navigation, and admin actions.
             </li>
             <li>
-              <strong>Product creation.</strong> Ten products were specified with unique SKUs and three categories.
+              <strong>CSV creation.</strong> Official headers SKU,Title,Category,Price,Stock,Description,ImageURL used for 10
+              products.
             </li>
             <li>
-              <strong>CSV creation.</strong> The official header SKU,Title,Category,Price,Stock,Description,ImageURL was used.
+              <strong>Online images.</strong> Direct online image links placed in ImageURL. No local file paths.
             </li>
             <li>
-              <strong>Online image hosting.</strong> Direct Pexels image URLs were placed in ImageURL. No local file paths were
-              used.
+              <strong>CSV import.</strong> All products uploaded through the dashboard import process.
             </li>
             <li>
-              <strong>CSV import.</strong> The catalog was imported through the dashboard import process with field mapping
-              verification. Products were not typed into the catalog one by one as the primary method.
+              <strong>Inventory tracking.</strong> Stock quantities tracked and reduced during checkout.
             </li>
             <li>
-              <strong>Product verification.</strong> After import, title, category, price, stock, description, image, and SKU
-              were checked for all ten products.
+              <strong>Out-of-Stock test.</strong> {OOS_TEST_SKU} set to 1, purchased, then shown as Out of Stock.
             </li>
             <li>
-              <strong>Inventory tracking.</strong> Stock is stored in the store database and reduced inside a checkout transaction.
+              <strong>Fulfillment.</strong> Order {demoOrder?.orderNumber ?? DEMO_ORDER_NUMBER} marked shipped with tracking{" "}
+              {DEMO_TRACKING_NUMBER}.
             </li>
             <li>
-              <strong>Out-of-Stock test.</strong> {OOS_TEST_SKU} was set to stock 1, purchased, reduced to 0, and labeled Out
-              of Stock.
-            </li>
-            <li>
-              <strong>Test order, fulfillment, and tracking.</strong> Order {demoOrder?.orderNumber ?? DEMO_ORDER_NUMBER} was
-              marked shipped with {DEMO_TRACKING_NUMBER}.
-            </li>
-            <li>
-              <strong>Mobile testing.</strong> The storefront uses a responsive layout, a mobile menu, flexible product grids,
-              and full-width images. It was checked at common phone widths.
-            </li>
-            <li>
-              <strong>Final website.</strong> The live store is available at {siteUrl}.
+              <strong>Mobile testing.</strong> Storefront verified on phone-width layout.
             </li>
           </ol>
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">3. Screenshot A — CSV Product File</h2>
+          <h2 className="font-serif text-3xl">3. Screenshot Evidence</h2>
+          <p className="mt-3 leading-7">
+            Open the HTML files in <code>COMP101_Project1/Screenshots/</code> and also review the live evidence sections below
+            from the running website:
+          </p>
+          <ul className="mt-4 list-disc space-y-2 pl-5 leading-7">
+            <li>01_CSV.html — CSV product file</li>
+            <li>02_Product_Import.html — successful import</li>
+            <li>03_Final_Website.html — final website</li>
+            <li>04_Inventory.html — inventory tracking</li>
+            <li>05_Out_of_Stock.html — out of stock product</li>
+            <li>06_Order_Tracking.html — tracking number</li>
+            <li>07_Mobile.html — mobile view</li>
+          </ul>
+        </section>
+
+        <section className="py-6">
+          <h2 className="font-serif text-3xl">4. Screenshot A — CSV Product File</h2>
           <p className="mt-3 leading-7">
             The CSV below is the actual products.csv used for import. It contains SKU, Title, Category, Price, Stock,
             Description, and ImageURL for all ten products.
@@ -191,7 +210,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">4. Screenshot B — Successful Product Import</h2>
+          <h2 className="font-serif text-3xl">5. Screenshot B — Successful Product Import</h2>
           <p className="mt-3 leading-7">
             The import process mapped CSV columns to platform fields and wrote {catalog.length} products into the catalog.
             Latest import status: {imports[0]?.status ?? "pending"} · {imports[0]?.rowCount ?? 0} rows ·{" "}
@@ -232,7 +251,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">5. Screenshot C — Final Website</h2>
+          <h2 className="font-serif text-3xl">6. Screenshot C — Final Website</h2>
           <p className="mt-3 leading-7">
             Final website link:{" "}
             <a className="font-semibold text-pine" href={siteUrl}>
@@ -257,7 +276,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">6. Screenshot D — Inventory Tracking</h2>
+          <h2 className="font-serif text-3xl">7. Screenshot D — Inventory Tracking</h2>
           <p className="mt-3 leading-7">
             Inventory tracking is enabled. Each product has a numerical stock value that the checkout transaction updates.
           </p>
@@ -286,7 +305,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">7. Screenshot E — Out-of-Stock Product</h2>
+          <h2 className="font-serif text-3xl">8. Screenshot E — Out-of-Stock Product</h2>
           <p className="mt-3 leading-7">
             The Compact Trail First Aid Kit was imported with Stock = 1. A Manual Payment test purchase reduced the quantity
             to 0. The product page now displays Out of Stock.
@@ -311,7 +330,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">8. Screenshot F — Order Fulfillment and Tracking Number</h2>
+          <h2 className="font-serif text-3xl">9. Screenshot F — Order Fulfillment and Tracking Number</h2>
           {demoOrder ? (
             <div className="mt-4 rounded-3xl border border-sand p-6">
               <p className="text-xs uppercase tracking-[0.2em] text-gold-dark">Test order</p>
@@ -350,7 +369,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">9. Screenshot G — Mobile Website</h2>
+          <h2 className="font-serif text-3xl">10. Screenshot G — Mobile Website</h2>
           <p className="mt-3 leading-7">
             The mobile layout was tested using a narrow viewport. Navigation collapses into a Menu button, product cards stack
             vertically, images scale to the screen width, and checkout controls remain tappable.
@@ -375,7 +394,7 @@ export default async function ReportPage() {
         </section>
 
         <section className="py-6">
-          <h2 className="font-serif text-3xl">10. Final Website Link</h2>
+          <h2 className="font-serif text-3xl">11. Final Website Link</h2>
           <p className="mt-3 leading-7">
             The live website for grading is{" "}
             <a className="font-semibold text-pine" href={siteUrl}>
